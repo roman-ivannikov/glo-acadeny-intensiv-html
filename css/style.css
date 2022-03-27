@@ -20,6 +20,17 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Medium.eot');
+    src: local('Roboto Medium'), local('Roboto-Medium'),
+        url('../fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Roboto-Medium.woff') format('woff'),
+        url('../fonts/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
 *,
 *::after,
 *::before {
@@ -73,8 +84,19 @@ h6 {
     margin: 0 auto;
 }
 
+:root {
+    --text-size-medium: 1.6rem;
+}
+
+.block__center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .button {
-    font-size: 1.6rem;
+    font-size: var(--text-size-medium);
     line-height: 150%;
     border-radius: 5rem;
     padding: 1rem 3rem;
@@ -106,7 +128,7 @@ h6 {
     align-items: center;
 }
 .header__nav {
-    font-size: 1.6rem;
+    font-size: var(--text-size-medium);
     line-height: 150%;
 }
 .header__nav a:not(:last-child) {
@@ -119,9 +141,6 @@ h6 {
 
 
 
-
-.main {
-}
 .main-display {
     padding-top: 27rem;
 }
@@ -138,9 +157,8 @@ h6 {
     line-height: 140%;
 }
 .main-display__button {
+    font-weight: 700;
     background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
-}
-.timer {
 }
 .main-display__timer {
     display: flex;
@@ -150,10 +168,6 @@ h6 {
     width: 10.2rem;
     height: 11.2rem;
     background-color: #121212;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
 }
 .timer__item:not(:last-child) {
     margin-right: 3rem;
@@ -164,7 +178,7 @@ h6 {
     line-height: 140%;
 }
 .timer__text {
-    font-size: 1.6rem;
+    font-size: var(--text-size-medium);
     line-height: 140%;
     opacity: .4;
 }
@@ -199,7 +213,7 @@ h6 {
     line-height: 140%;
 }
 .work__description {
-    font-size: 1.6rem;
+    font-size: var(--text-size-medium);
     line-height: 160%;
 }
 
@@ -208,24 +222,28 @@ h6 {
     margin-bottom: 20rem;
     position: relative;
 }
+.process .process__img {
+    transform: rotate(45deg);
+}
 .process__img {
-    width: 12.7rem;
-    height: 12.7rem;
+    width: 9rem;
+    height: 4.4rem;
     margin-right: 2rem;
 }
 .process__header {
+    padding-top: 1rem;
     font-weight: 700;
     font-size: 4.8rem;
     line-height: 140%;
 }
 .process__title {
     display: flex;
-    align-items: center;
+    margin-bottom: 4.9rem;
 }
 .process__description {
     max-width: 41.1rem;
     margin-bottom: 8rem;
-    font-size: 1.6rem;
+    font-size: var(--text-size-medium);
     line-height: 160%;
     opacity: .5;
 }
@@ -258,4 +276,80 @@ h6 {
     font-size: 1.4rem;
     line-height: 160%;
     opacity: .5;
+}
+
+.command {
+    padding-bottom: 20rem;
+}
+.command .process__title {
+    margin-bottom: 11.3rem;
+}
+.command__wrap {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 11rem;
+}
+.command__img {
+    width: 19rem;
+    height: 19rem;
+    margin-bottom: 4rem;
+    border-radius: 50%;
+}
+.command__name {
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 140%;
+}
+.command__professional {
+    font-size: var(--text-size-medium);
+    line-height: 160%;
+    opacity: .8;
+    margin-bottom: 3rem;
+}
+.command__link {
+    font-size: var(--text-size-medium);
+    line-height: 150%;
+    border: .1rem solid #FFFFFF;
+}
+
+
+.assembly {
+    margin-bottom: 24.4rem;
+}
+.assembly__header {
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 140%;
+    margin-bottom: 3rem;
+}
+.assembly__description {
+    font-size: var(--text-size-medium);
+    line-height: 160%;
+    opacity: .5;
+    margin-bottom: 4.52rem;
+}
+.assembly__button {
+    font-weight: 700;
+    background: linear-gradient(94.78deg, #DF5950 11.19%, #451046 93.72%);
+    margin-bottom: 4.08rem;
+}
+.assembly__socials {
+    display: flex;
+}
+.assembly__item {
+    background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.assembly__item:not(:last-child) {
+    margin-right: 3rem;
+}
+.assembly__item img {
+    width: 2.4rem;
+    height: 2.4rem;
 }
